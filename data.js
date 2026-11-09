@@ -22,7 +22,7 @@ window.SITE = {
 
   // Paste your Formspree form address here once you create it (see the launch guide).
   // Example: "https://formspree.io/f/abcdwxyz"
-  formEndpoint: "",
+  formEndpoint: "https://formspree.io/f/xgaajkkr",
 
   headline: "I build LLM systems that run in production.",
   intro:
