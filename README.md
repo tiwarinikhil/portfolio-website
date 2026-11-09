@@ -69,6 +69,13 @@ The full step-by-step guide is in the "Launch nikhiltiwari.in" doc (link in the 
 
 3. **Updating later:** edit `data.js` on GitHub (open file → pencil icon → Commit changes). The live site updates in about a minute. Also copy the change into this folder so your laptop copy stays the same.
 
+## SEO (getting found on Google)
+
+- `index.html` holds the title, description, social preview tags and structured data (who you are, your LinkedIn/GitHub).
+- `sitemap.xml` and `robots.txt` tell search engines what to crawl. `favicon.svg` is the tab/search icon.
+- If you change your intro or availability in `data.js`, copy the same text into the hero section of `index.html` too, so search engines see it without JavaScript.
+- The site address `https://nikhiltiwary.in/` is written in `index.html`, `sitemap.xml` and `robots.txt`. If the domain ever changes, update all three.
+
 ## Note on the domain name
 
 Your resume and LinkedIn say **Tiwary**. If you buy `nikhiltiwari.in` (with an i), people who type your name as written will miss it. Consider `nikhiltiwary.in`, or buy both.
