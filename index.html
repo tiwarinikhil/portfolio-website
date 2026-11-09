@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nikhil Kumar Tiwary</title>
+<meta name="description" content="Nikhil Kumar Tiwary, AI Engineer in Bangalore. RAG search, voice AI agents and on-device vision, built for production.">
+<meta property="og:title" content="Nikhil Kumar Tiwary, AI Engineer">
+<meta property="og:description" content="RAG search, voice AI agents and on-device vision, built for production.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..750&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="#top" data-bind="shortName">Nikhil Tiwary</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#services">Hire me</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme" id="theme-toggle" type="button" aria-label="Switch colour theme">
+      <span class="theme-dot" aria-hidden="true"></span><span class="theme-text">Theme</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero wrap" id="top">
+    <div class="hero-text">
+      <p class="eyebrow"><span data-bind="role">AI Engineer</span> · <span data-bind="location">Bangalore, India</span></p>
+      <h1 data-bind="headline">I build LLM systems that run in production.</h1>
+      <p class="lede" data-bind="intro"></p>
+      <p class="avail"><span class="pulse" aria-hidden="true"></span><span data-bind="availability"></span></p>
+      <div class="cta-row">
+        <a class="btn primary" href="#contact">Tell me what you want to build</a>
+        <a class="btn" id="resume-link" href="Nikhil-Kumar-Tiwary-Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      </div>
+    </div>
+
+    <aside class="ask" aria-labelledby="ask-title">
+      <div class="ask-head">
+        <h2 id="ask-title">Search my experience</h2>
+        <p class="ask-note">Keyword search over my resume, run in your browser. Every result is a line I wrote, with where it comes from.</p>
+      </div>
+      <form class="ask-form" id="ask-form" role="search">
+        <label class="sr" for="ask-input">Question</label>
+        <input id="ask-input" type="search" autocomplete="off" placeholder="Have you deployed on AWS?" value="Have you deployed on AWS?">
+        <button class="btn primary small" type="submit">Search</button>
+      </form>
+      <div class="chips" id="ask-chips" aria-label="Example questions"></div>
+      <ol class="hits" id="ask-hits" aria-live="polite"></ol>
+    </aside>
+  </section>
+
+  <section class="stats wrap" aria-label="In numbers">
+    <dl class="stat-row" id="stats"></dl>
+  </section>
+
+  <section class="section wrap" id="work">
+    <div class="section-head">
+      <h2>Selected work</h2>
+      <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+    </div>
+    <ul class="projects" id="projects"></ul>
+  </section>
+
+  <section class="section wrap" id="experience">
+    <div class="section-head"><h2>Experience</h2></div>
+    <ol class="timeline" id="timeline"></ol>
+  </section>
+
+  <section class="section wrap split" id="skills">
+    <div>
+      <div class="section-head"><h2>Tools I use</h2></div>
+      <div class="skills" id="skill-groups"></div>
+    </div>
+    <div>
+      <div class="section-head"><h2>Education</h2></div>
+      <ul class="edu" id="education"></ul>
+      <p class="achieve" id="achievements"></p>
+    </div>
+  </section>
+
+  <section class="section band" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Work with me</h2>
+        <p class="section-sub">I take on a few freelance projects at a time. You get a short call, a written plan with a fixed price, updates every two days, and code on GitHub with a README and a walkthrough video.</p>
+      </div>
+      <div class="services" id="service-list"></div>
+    </div>
+  </section>
+
+  <section class="section wrap contact" id="contact">
+    <div class="contact-text">
+      <h2>Tell me what you want to build</h2>
+      <p>A few lines is enough. Say what it should do and what it needs to work with, and I'll reply with questions or a rough plan.</p>
+      <div class="direct">
+        <p class="label">Or write to me directly</p>
+        <div class="email-row">
+          <a class="email" id="email-link" href="mailto:nikhiltiwarijt2015@gmail.com">nikhiltiwarijt2015@gmail.com</a>
+          <button class="btn small" id="copy-email" type="button">Copy</button>
+        </div>
+        <p class="phone" id="phone-line" hidden></p>
+        <p class="links"><a id="li-link" href="#" target="_blank" rel="noopener">LinkedIn</a><a id="gh-link" href="#" target="_blank" rel="noopener">GitHub</a></p>
+      </div>
+    </div>
+
+    <form class="form" id="contact-form" novalidate>
+      <div class="field">
+        <label for="f-name">Your name</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="f-what">What do you want to build?</label>
+        <textarea id="f-what" name="message" rows="5" required placeholder="A chatbot that answers support questions from our help centre, about 300 articles."></textarea>
+      </div>
+      <div class="field">
+        <label for="f-budget">Budget</label>
+        <select id="f-budget" name="budget">
+          <option value="Not sure yet">Not sure yet</option>
+          <option value="Under $500">Under $500</option>
+          <option value="$500 to $1,500">$500 to $1,500</option>
+          <option value="Over $1,500">Over $1,500</option>
+        </select>
+      </div>
+      <input type="text" name="_gotcha" class="trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn primary" type="submit" id="f-submit">Send message</button>
+      <p class="form-status" id="form-status" role="status"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <p>© <span id="year">2026</span> <span data-bind="name">Nikhil Kumar Tiwary</span></p>
+    <p class="foot-links"><a id="foot-li" href="#" target="_blank" rel="noopener">LinkedIn</a><a id="foot-gh" href="#" target="_blank" rel="noopener">GitHub</a><a href="#top">Back to top</a></p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
