@@ -1,0 +1,64 @@
+/*
+  Design tokens: colours, fonts, sizes. Light theme first, then dark (system setting or the theme button).
+*/
+/* Fonts are served from this site (assets/fonts), so the look never depends on Google being reachable. */
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400 800; font-display: swap; src: url("../fonts/inter-latin.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/plex-mono-400.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/plex-mono-500.woff2") format("woff2"); }
+
+:root {
+  --bg: #fbfbfd;
+  --surface: #ffffff;
+  --surface-2: #f2f3f7;
+  --ink: #111216;
+  --muted: #62646f;
+  --line: #e4e5ec;
+  --accent: #2f5bff;
+  --accent-2: #8a4dff;
+  --accent-3: #00a6c8;
+  --accent-ink: #ffffff;
+  --accent-soft: #eaefff;
+  --mark: #ffe6a0;
+  --mark-ink: #111216;
+  --live: #19a35a;
+  --glow: color-mix(in srgb, var(--accent) 13%, transparent);
+  --shadow: 0 1px 2px rgba(17,18,22,.04), 0 12px 40px -16px rgba(17,18,22,.14);
+  --shadow-lg: 0 30px 80px -30px rgba(17,18,22,.30);
+
+  --f-display: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --step--1: 0.875rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.25rem;
+  --step-2: 1.6rem;
+  --step-3: clamp(2.1rem, 1.2rem + 3.4vw, 3.9rem);
+  --step-4: clamp(2.7rem, 1rem + 6.6vw, 6.4rem);
+
+  --radius: 12px;
+  --r-card: 28px;
+  --maxw: 1180px;
+  --ease: cubic-bezier(.2,.7,.2,1);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #000000; --surface: #111114; --surface-2: #18181c; --ink: #f5f5f7; --muted: #a1a1aa; --line: #26262c;
+    --accent: #6b8cff; --accent-2: #b48cff; --accent-3: #36d3f2; --accent-ink: #07080c; --accent-soft: #161c33;
+    --mark: #5b4a17; --mark-ink: #fff3cc; --live: #3fd38a;
+    --glow: color-mix(in srgb, var(--accent) 22%, transparent);
+    --shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 20px 50px -24px rgba(0,0,0,.8);
+    --shadow-lg: 0 40px 100px -30px rgba(0,0,0,.9);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #000000; --surface: #111114; --surface-2: #18181c; --ink: #f5f5f7; --muted: #a1a1aa; --line: #26262c;
+  --accent: #6b8cff; --accent-2: #b48cff; --accent-3: #36d3f2; --accent-ink: #07080c; --accent-soft: #161c33;
+  --mark: #5b4a17; --mark-ink: #fff3cc; --live: #3fd38a;
+  --glow: color-mix(in srgb, var(--accent) 22%, transparent);
+  --shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 20px 50px -24px rgba(0,0,0,.8);
+  --shadow-lg: 0 40px 100px -30px rgba(0,0,0,.9);
+  color-scheme: dark;
+}

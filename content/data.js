@@ -16,6 +16,7 @@ window.SITE = {
 
   linkedin: "https://www.linkedin.com/in/nikhil-tiwary007/",
   github: "https://github.com/tiwarinikhil",
+  instagram: "https://www.instagram.com/nikhiltiwary.in/",
   // The resume PDF is not in the GitHub repo. To show a "Resume (PDF)" button, put the PDF next to
   // index.html and write its file name here, e.g. "Nikhil-Kumar-Tiwary-Resume.pdf". Leave it empty to hide the button.
   resumeFile: "",
@@ -279,5 +280,45 @@ window.SITE = {
     { school: "Netaji Subhash Engineering College, Kolkata", degree: "B.Tech in Computer Science Engineering", dates: "2017 to 2021" }
   ],
 
-  achievements: ["98.70 percentile in GATE 2022 (Computer Science), All India Rank 934."]
+  achievements: ["98.70 percentile in GATE 2022 (Computer Science), All India Rank 934."],
+
+  /*
+    BLOG POSTS
+    Every PDF inside the "Blogs" folder shows up on the site by itself. You don't have to touch this file.
+    - Start the file name with a number (5. My_New_Post.pdf). Higher numbers show first.
+    - The title is made from the file name (underscores become spaces).
+    - Want a nicer title, a short summary or tags? Add a block below. "file" must match the PDF name exactly.
+    - To hide a PDF without deleting it, add  hidden: true  to its block.
+    - If a post also has its own web page in the "blog" folder, put that file name in  page  and the card opens it.
+  */
+  blogs: [
+    {
+      file: "4. AI_Engineer_Roadmap.pdf",
+      page: "ai-engineer-roadmap.html",
+      title: "The AI Engineer Roadmap",
+      summary: "A 7-phase plan to become an AI Engineer in India in 5 to 6 months. Free GitHub repos and YouTube playlists, plus one project to build at the end of every phase.",
+      tags: ["AI Engineering", "Roadmap"]
+    },
+    {
+      file: "3. Cold_DM_Email_Templates_Nikhil_Tiwary.pdf",
+      page: "cold-dm-email-templates.html",
+      title: "Cold DM and email templates to reach startup founders",
+      summary: "After 200+ applications went nowhere, messaging founders directly got about 30% replies and 3-4 offers. Four copy-paste templates, a guide to the founder interview, and real replies.",
+      tags: ["Job search", "Templates"]
+    },
+    {
+      file: "2. Career_Roadmap_Framework.pdf",
+      page: "career-roadmap-framework.html",
+      title: "Build your own career roadmap",
+      summary: "A 6-step framework and one master prompt that builds a week-by-week plan for any tech or finance role. Includes 3 worked examples and a Sunday self-check.",
+      tags: ["Career", "Prompts"]
+    },
+    {
+      file: "1. NeetCode_Striver_Question_Reference.pdf",
+      page: "dsa-sheet-neetcode-150-striver.html",
+      title: "NeetCode 150 + Striver DSA sheet, deduplicated",
+      summary: "269 unique interview questions grouped by pattern, with LeetCode, NeetCode, Striver and YouTube links for each. Questions on both lists appear once.",
+      tags: ["DSA", "Interviews"]
+    }
+  ]
 };

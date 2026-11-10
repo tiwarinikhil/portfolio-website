@@ -1,0 +1,37 @@
+/*
+  Blog list page (blogs.html) and the blog cards.
+*/
+/* ---------- Blog list ---------- */
+.head-text { display: grid; gap: 10px; min-width: 0; }
+.page-head { padding-block: clamp(56px, 9vw, 110px) 0; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+.page-head h1 { font-size: var(--step-4); font-weight: 800; letter-spacing: -0.045em; line-height: 1.0; max-width: 16ch; }
+.page-head .lede { margin-inline: auto; }
+.page-head .eyebrow a { color: inherit; }
+.blog-page { padding-top: clamp(40px, 6vw, 64px); }
+.blog-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.blog-empty { color: var(--muted); font-size: var(--step--1); padding-top: 14px; grid-column: 1 / -1; text-align: center; }
+.blog-card { position: relative; min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); overflow: hidden; box-shadow: var(--shadow); transition: border-color .2s, transform .35s var(--ease), box-shadow .35s; }
+.blog-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: color-mix(in srgb, var(--accent) 40%, var(--line)); }
+.blog-card:hover h3 { color: var(--accent); }
+.blog-link { position: relative; z-index: 1; color: inherit; text-decoration: none; display: flex; flex-direction: column; height: 100%; }
+.blog-thumb { position: relative; aspect-ratio: 16 / 10; overflow: hidden; border-bottom: 1px solid var(--line); background: radial-gradient(120% 90% at 0% 0%, color-mix(in srgb, var(--accent) 30%, var(--surface)), transparent 60%), radial-gradient(90% 80% at 100% 100%, color-mix(in srgb, var(--accent-2) 28%, var(--surface)), transparent 60%), var(--accent-soft); }
+.blog-card:nth-child(3n+2) .blog-thumb { background: radial-gradient(120% 90% at 100% 0%, color-mix(in srgb, var(--accent-2) 32%, var(--surface)), transparent 60%), radial-gradient(90% 80% at 0% 100%, color-mix(in srgb, #ff5c8a 24%, var(--surface)), transparent 60%), var(--accent-soft); }
+.blog-card:nth-child(3n) .blog-thumb { background: radial-gradient(120% 90% at 0% 100%, color-mix(in srgb, var(--accent-3) 32%, var(--surface)), transparent 60%), radial-gradient(90% 80% at 100% 0%, color-mix(in srgb, var(--accent) 26%, var(--surface)), transparent 60%), var(--accent-soft); }
+.blog-thumb canvas { position: absolute; inset: 0; width: 100%; height: auto; display: block; background: #fff; transition: transform .6s var(--ease); }
+.blog-card:hover .blog-thumb canvas { transform: scale(1.04); }
+.blog-cover { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; padding: 24px; }
+.blog-cover-kind { font: 600 0.72rem var(--f-body); color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; }
+.blog-cover-title { font: 800 var(--step-2) var(--f-display); letter-spacing: -0.03em; line-height: 1.08; color: var(--ink); text-wrap: balance; }
+.blog-thumb.has-thumb .blog-cover { display: none; }
+.blog-body { padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.blog-body h3 { font-size: var(--step-1); font-weight: 700; letter-spacing: -0.02em; transition: color .15s; }
+.blog-sum { color: var(--muted); font-size: 0.97rem; }
+.blog-meta { margin-top: auto; padding-top: 8px; display: flex; justify-content: space-between; gap: 12px; font-size: 0.85rem; color: var(--muted); }
+.blog-read { color: var(--accent); font-weight: 600; transition: transform .2s var(--ease); }
+.blog-card:hover .blog-read { transform: translateX(4px); }
+.blog-tools { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-bottom: 36px; }
+.blog-search { position: relative; width: min(100%, 480px); }
+.blog-search svg { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.blog-search input { width: 100%; font: 400 var(--step-0) var(--f-body); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 12px 18px 12px 44px; box-shadow: var(--shadow); }
+.blog-search input:focus { outline: 0; border-color: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent); }
+.blog-count { font-size: 0.85rem; color: var(--muted); }
